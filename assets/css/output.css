@@ -368,6 +368,9 @@
   .right-3 {
     right: calc(var(--spacing) * 3);
   }
+  .right-4 {
+    right: calc(var(--spacing) * 4);
+  }
   .\!bottom-5 {
     bottom: calc(var(--spacing) * 5) !important;
   }
@@ -750,6 +753,9 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -761,6 +767,9 @@
   }
   .gap-1 {
     gap: var(--spacing);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -797,6 +806,11 @@
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-6 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
   }
   :where(.divide-y > :not(:last-child)) {
     --tw-divide-y-reverse: 0;
@@ -880,6 +894,12 @@
   .border-lime {
     border-color: var(--color-lime);
   }
+  .border-lime\/25 {
+    border-color: color-mix(in srgb, #d8ff3e 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-lime) 25%, transparent);
+    }
+  }
   .border-lime\/30 {
     border-color: color-mix(in srgb, #d8ff3e 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -955,6 +975,12 @@
   .bg-ink {
     background-color: var(--color-ink);
   }
+  .bg-ink\/60 {
+    background-color: color-mix(in srgb, #0a0a0a 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+    }
+  }
   .bg-ink\/80 {
     background-color: color-mix(in srgb, #0a0a0a 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -968,6 +994,12 @@
     background-color: color-mix(in srgb, #d8ff3e 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-lime) 10%, transparent);
+    }
+  }
+  .bg-lime\/15 {
+    background-color: color-mix(in srgb, #d8ff3e 15%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-lime) 15%, transparent);
     }
   }
   .bg-panel {
@@ -1172,6 +1204,9 @@
   }
   .pt-28 {
     padding-top: calc(var(--spacing) * 28);
+  }
+  .pr-12 {
+    padding-right: calc(var(--spacing) * 12);
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
@@ -1556,6 +1591,12 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
+  .placeholder\:text-white\/35::placeholder {
+    color: color-mix(in srgb, #fff 35%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 35%, transparent);
+    }
+  }
   .after\:\!text-lg::after {
     content: var(--tw-content);
     font-size: var(--text-lg) !important;
@@ -1582,6 +1623,14 @@
     }
     .hover\:bg-gray-50:hover {
       background-color: var(--color-gray-50);
+    }
+    .hover\:bg-lime\/10:hover {
+      background-color: color-mix(in srgb, #d8ff3e 10%, transparent);
+    }
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-lime\/10:hover {
+        background-color: color-mix(in oklab, var(--color-lime) 10%, transparent);
+      }
     }
     .hover\:bg-slate-100:hover {
       background-color: var(--color-slate-100);

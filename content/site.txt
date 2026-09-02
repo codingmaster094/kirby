@@ -30,6 +30,9 @@ Footerlinks:
 - 
   text: Contact
   link: page://g4xzcsot7mak6oor
+- 
+  text: Workout Guide
+  link: page://workoutguide00001
 
 ----
 

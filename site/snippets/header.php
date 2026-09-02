@@ -44,7 +44,7 @@ $page = page();
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3.5 sm:px-6 lg:px-10">
         <a href="<?= $site->url() ?>" class="flex shrink-0 items-center">
             <?php snippet('site-logo', ['variant' => 'header']) ?>
-        </a>
+        </a>    
         <nav class="hidden items-center gap-1 text-sm font-semibold text-slate-600 md:flex">
             <?php foreach ($site->children()->listed()->filterBy('intendedTemplate', '!=', 'legal') as $item): ?>
                 <a
