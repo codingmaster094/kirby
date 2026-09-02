@@ -10,19 +10,11 @@ Heading: Tell us your goal — we’ll show the steps
 
 ----
 
-Description: Type what you want to fix (for example: “I have belly fat”) and we’ll show which exercises to do and how to do them.
+Description: Choose your goal below and we’ll show which exercises to do, how many sets, and how to do each move.
 
 ----
 
-Searchplaceholder: e.g. I have belly fat
-
-----
-
-Searchhelp: Type your problem or tap a suggestion below.
-
-----
-
-Emptymessage: No match yet. Try words like belly fat, back pain, knees, or stamina.
+Searchhelp: Tap a suggestion below — for example Belly fat, Knee pain, or Improve stamina. We’ll show which exercises to do, how many sets/reps, and how to do each move step by step.
 
 ----
 

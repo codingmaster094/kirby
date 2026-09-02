@@ -40,18 +40,12 @@ tabs:
             label: Description
             type: textarea
             size: medium
-          searchPlaceholder:
-            label: Search placeholder
-            type: text
-            default: e.g. I have belly fat
           searchHelp:
-            label: Search help text
-            type: text
-            default: Type your problem or tap a suggestion below.
-          emptyMessage:
-            label: No results message
-            type: text
-            default: No match yet. Try another phrase or pick a suggestion.
+            label: Help text above suggestions
+            type: textarea
+            size: small
+            buttons: false
+            default: Tap a suggestion below — for example Belly fat, Knee pain, or Improve stamina. We’ll show which exercises to do, how many sets/reps, and how to do each move step by step.
           concerns:
             label: Problems & workouts
             type: structure
@@ -65,8 +59,8 @@ tabs:
               keywords:
                 label: Keywords
                 type: text
-                help: Comma-separated. Matched when the user types (e.g. belly fat, tummy, stomach).
-                placeholder: belly fat, tummy, stomach fat, abs fat
+                help: Optional notes for editors (not shown on the site).
+                placeholder: belly fat, tummy, stomach fat
               summary:
                 label: Short summary
                 type: textarea
