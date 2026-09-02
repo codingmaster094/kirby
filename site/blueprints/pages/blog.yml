@@ -1,0 +1,36 @@
+title: Blog
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          layout:
+            label: Layout
+            type: layout
+            help: Click + to add Hero, Benefits, Media, or Swipers. Drag blocks to reorder.
+            layouts:
+              - "1/1"
+            fieldsets:
+              - hero
+              - benefits
+              - media
+              - swipers
+              - faq
+              - cta
+      posts:
+        type: pages
+        label: Blog Posts
+        template: blog-post
+        layout: cards
+        size: small
+
+  sidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      preview:
+        type: live-preview
+        label: Preview

@@ -1,0 +1,5 @@
+Uuid: rpddm0e3ophpk640
+
+----
+
+Template: image

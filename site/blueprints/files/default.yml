@@ -1,0 +1,6 @@
+title: File
+
+options:
+  delete: true
+  replace: true
+  changeName: true

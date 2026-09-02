@@ -1,0 +1,85 @@
+name: Client Transformations
+icon: users
+preview: fields
+wysiwyg: true
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Client Transformations
+
+  heading:
+    label: Heading
+    type: text
+    default: Real Bodies. Real Results.
+
+  description:
+    label: Intro
+    type: textarea
+    size: small
+    buttons: false
+    help: Optional short intro above the transformation stories.
+
+  items:
+    label: Transformations
+    type: structure
+    min: 1
+    help: Add stories here. Layout alternates automatically (content/image).
+    columns:
+      title:
+        width: 2/3
+      image:
+        width: 1/3
+    fields:
+      title:
+        label: Title
+        type: text
+        required: true
+        placeholder: From Burnout to Breakthrough
+
+      description:
+        label: Description
+        type: textarea
+        size: small
+        buttons: false
+        required: true
+        help: Short story of how IronPace Gym helped.
+
+      points:
+        label: Key Points
+        type: structure
+        min: 3
+        max: 5
+        fields:
+          text:
+            label: Point
+            type: text
+            required: true
+
+      image:
+        label: Before & After Image
+        type: files
+        max: 1
+        layout: cards
+        query: page.files.filterBy("type", "image")
+        uploads:
+          template: image
+        help: Upload one combined before/after image (side-by-side), like the transformation screenshot.
+
+      imageAlt:
+        label: Image Alt Text
+        type: text
+        help: Accessible description for the transformation image.
+
+      ctaText:
+        label: CTA Text
+        type: text
+        width: 1/2
+        default: Start Your Journey
+        help: Leave empty to hide the button.
+
+      ctaLink:
+        label: CTA Link
+        type: link
+        width: 1/2

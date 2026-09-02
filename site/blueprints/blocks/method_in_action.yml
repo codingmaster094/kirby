@@ -1,0 +1,60 @@
+name: Method in Action
+icon: play
+preview: fields
+wysiwyg: true
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Training in motion
+
+  heading:
+    label: Heading
+    type: text
+    default: SEE THE METHOD IN ACTION
+
+  description:
+    label: Description
+    type: textarea
+    size: small
+    buttons: false
+
+  slides:
+    label: Slides
+    type: structure
+    min: 1
+    fields:
+      image:
+        label: Cover Image
+        type: files
+        max: 1
+        layout: cards
+        query: page.files
+        uploads:
+          template: image
+        help: Optional thumbnail. If empty, uploaded video preview is used automatically.
+
+      video:
+        label: Upload Video
+        type: files
+        max: 1
+        layout: cards
+        query: page.files
+        uploads:
+          template: video
+        help: Upload MP4/WebM video OR use Video URL below
+
+      videoUrl:
+        label: Video URL
+        type: url
+        placeholder: https://youtube.com/watch?v=...
+        help: YouTube or Vimeo link (optional if video uploaded above)
+
+      caption:
+        label: Caption
+        type: text
+
+      alt:
+        label: Image Alt
+        type: text

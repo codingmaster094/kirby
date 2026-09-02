@@ -1,0 +1,22 @@
+title: Logo
+
+accept:
+  maxsize: 67108864
+  mime:
+    - image/svg+xml
+    - image/png
+    - image/jpeg
+    - image/webp
+    - image/gif
+  extension:
+    - svg
+    - png
+    - jpg
+    - jpeg
+    - webp
+    - gif
+
+options:
+  delete: true
+  replace: true
+  changeName: true

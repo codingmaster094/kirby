@@ -1,0 +1,9 @@
+﻿Uuid: cada8fe521eac513
+
+----
+
+Template: image
+
+----
+
+Alt: Client body transformation before and after

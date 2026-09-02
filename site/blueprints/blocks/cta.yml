@@ -1,0 +1,45 @@
+name: CTA
+icon: bolt
+preview: fields
+wysiwyg: true
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Ready to start?
+
+  heading:
+    label: Heading
+    type: text
+    required: true
+    default: Unlock your true potential today
+
+  description:
+    label: Description
+    type: textarea
+    size: medium
+    buttons: false
+    default: Book a free strategy call and get a personalized plan built around your goals, schedule, and current fitness level.
+
+  primaryText:
+    label: Primary button text
+    type: text
+    width: 1/2
+    default: Book a Call
+
+  primaryLink:
+    label: Primary button link
+    type: link
+    width: 1/2
+
+  secondaryText:
+    label: Secondary button text
+    type: text
+    width: 1/2
+    default: Meet the Team
+
+  secondaryLink:
+    label: Secondary button link
+    type: link
+    width: 1/2

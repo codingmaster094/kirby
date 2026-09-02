@@ -1,0 +1,5 @@
+Uuid: cfb10wgdefhyy9lt
+
+----
+
+Template: image

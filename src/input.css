@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@source "../site/**/*.php";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #0a0a0a;
+  --color-panel: #141414;
+  --color-lime: #d8ff3e;
+  --color-soft: #a3a3a3;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-slate-50 font-sans text-slate-900 antialiased;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+@layer components {
+  .bg-ink {
+    background-color: var(--color-ink);
+  }
+
+  .bg-panel {
+    background-color: var(--color-panel);
+  }
+
+  .text-ink {
+    color: var(--color-ink);
+  }
+
+  .text-lime {
+    color: var(--color-lime);
+  }
+
+  .text-soft {
+    color: var(--color-soft);
+  }
+
+  .btn-lime {
+    background: var(--color-lime);
+    color: var(--color-ink);
+    transition: transform 0.25s var(--ease-out-expo), filter 0.25s ease, background 0.25s ease;
+  }
+
+  .btn-lime:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details summary {
+    list-style: none;
+  }
+
+  .why-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s var(--ease-out-expo), border-color 0.3s ease, background 0.3s ease;
+  }
+
+  .why-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(216, 255, 62, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .badge-num {
+    background: var(--color-lime);
+    color: var(--color-ink);
+  }
+
+  .hero-kenburns {
+    animation: heroKenburns 18s ease-in-out infinite alternate;
+    transform-origin: center;
+  }
+
+  /* Visible by default to avoid refresh blink; JS enables hide for below-fold only */
+  .reveal,
+  .tf-reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  html.reveal-enabled .reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+  }
+
+  html.reveal-enabled .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  html.reveal-enabled .tf-reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.85s var(--ease-out-expo), transform 0.85s var(--ease-out-expo);
+    will-change: opacity, transform;
+  }
+
+  html.reveal-enabled .tf-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .tf-progress-rail {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    height: 14rem;
+  }
+
+  .tf-progress-track {
+    position: relative;
+    width: 2px;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .tf-progress-fill {
+    position: absolute;
+    inset: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    background: var(--color-lime);
+    transition: transform 0.45s var(--ease-out-expo);
+  }
+
+  .tf-progress-dots {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tf-progress-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.28);
+    transition: background 0.3s ease, transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+  }
+
+  .tf-progress-dot.is-active {
+    background: var(--color-lime);
+    transform: scale(1.35);
+    box-shadow: 0 0 0 4px rgba(216, 255, 62, 0.15);
+  }
+
+  .tf-parallax-img {
+    transform: scale(1.04);
+    transform-origin: center;
+    will-change: transform;
+    transition: transform 0.2s linear;
+  }
+
+  .tf-media {
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html.reveal-enabled .reveal:not(.is-visible),
+    html.reveal-enabled .tf-reveal:not(.is-visible),
+    .reveal,
+    .tf-reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    .tf-parallax-img {
+      transform: none !important;
+      transition: none;
+    }
+
+    .tf-progress-fill,
+    .tf-progress-dot {
+      transition: none;
+    }
+
+    .hero-kenburns {
+      animation: none;
+    }
+  }
+}
+
+@keyframes heroKenburns {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}

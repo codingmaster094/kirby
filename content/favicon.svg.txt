@@ -1,0 +1,5 @@
+Uuid: ironlogofavicon1
+
+----
+
+Template: logo

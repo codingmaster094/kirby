@@ -1,0 +1,36 @@
+name: Benefits
+icon: bolt
+preview: fields
+wysiwyg: true
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Results that matter
+
+  heading:
+    label: Heading
+    type: text
+    required: true
+
+  description:
+    label: Description
+    type: textarea
+    size: small
+    buttons: false
+
+  items:
+    label: Benefit items
+    type: structure
+    fields:
+      title:
+        label: Title
+        type: text
+        required: true
+      description:
+        label: Description
+        type: textarea
+        required: true
+        size: medium
+        buttons: false

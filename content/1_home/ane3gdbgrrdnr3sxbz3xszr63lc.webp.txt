@@ -1,0 +1,5 @@
+Uuid: dzvdqg123s9imolo
+
+----
+
+Template: image

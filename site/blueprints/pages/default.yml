@@ -1,0 +1,7 @@
+title: Page
+
+fields:
+  text:
+    label: Content
+    type: textarea
+    size: large

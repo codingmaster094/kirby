@@ -1,0 +1,12 @@
+{
+  "name": "my-company/live-preview",
+  "description": "Live page preview panel section for Kirby",
+  "type": "kirby-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "My Company"
+    }
+  ]
+}

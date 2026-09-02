@@ -1,0 +1,65 @@
+Title: Privacy Policy
+
+----
+
+Eyebrow: Legal
+
+----
+
+Heading: Privacy Policy
+
+----
+
+Text:
+
+## Overview
+
+IronPace Coaching ("we", "us", or "our") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our website and coaching services.
+
+## Information We Collect
+
+We may collect:
+
+- Name, email address, and phone number
+- Fitness goals, training history, and coaching preferences
+- Website usage data such as pages visited and device type
+- Messages you send through forms or email
+
+## How We Use Your Information
+
+We use your information to:
+
+- Provide coaching services and respond to inquiries
+- Improve our website and training experience
+- Send service-related updates you request
+- Maintain security and prevent misuse
+
+## Cookies
+
+Our website may use cookies or similar technologies to improve browsing experience and remember preferences. You can manage cookie consent through the banner on our site.
+
+## Sharing of Information
+
+We do not sell your personal information. We may share data only with trusted service providers who help us operate the website or coaching platform, or when required by law.
+
+## Data Retention
+
+We keep your information only as long as needed for coaching services, legal obligations, or legitimate business purposes.
+
+## Your Rights
+
+You may request access, correction, or deletion of your personal information by contacting us at coach@ironpace.com.
+
+## Contact
+
+If you have questions about this Privacy Policy, contact us at:
+
+Email: coach@ironpace.com
+
+## Updates
+
+We may update this Privacy Policy from time to time. The latest version will always be available on this page.
+
+----
+
+Uuid: 40b0rchc2jmfwidg

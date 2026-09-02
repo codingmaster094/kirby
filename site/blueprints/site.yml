@@ -1,0 +1,147 @@
+title: Website
+
+tabs:
+  pages:
+    label: Pages
+    sections:
+      pages:
+        type: pages
+        label: Pages
+        status: all
+
+  footer:
+    label: Footer
+    icon: menu
+
+    columns:
+      main:
+        width: 2/3
+
+        fields:
+          footerHeading:
+            label: Footer Heading
+            type: text
+
+          footerDescription:
+            label: Footer Description
+            type: textarea
+            size: medium
+
+          footerLinks:
+            label: Footer Links
+            type: structure
+            help: Main navigation links shown under Links.
+            fields:
+              text:
+                label: Link Text
+                type: text
+
+              link:
+                label: Link
+                type: link
+
+          footerLegalHeading:
+            label: Legal heading
+            type: text
+            default: Legal
+
+          footerLegalLinks:
+            label: Legal Links
+            type: structure
+            help: Privacy Policy, Terms, and other legal pages.
+            fields:
+              text:
+                label: Link Text
+                type: text
+
+              link:
+                label: Link
+                type: link
+
+      sidebar:
+        width: 1/3
+
+        fields:
+          copyright:
+            label: Copyright
+            type: text
+            default: © 2026 All Rights Reserved
+
+  settings:
+    label: Settings
+    icon: settings
+    columns:
+      branding:
+        width: 1/2
+        fields:
+          logo:
+            label: Header Logo
+            type: files
+            max: 1
+            layout: cards
+            uploads:
+              template: logo
+            help: Workout brand logo for header. Dark version on white background. SVG recommended.
+
+          footerLogo:
+            label: Footer Logo
+            type: files
+            max: 1
+            layout: cards
+            uploads:
+              template: logo
+            help: Light/white logo for dark footer background. SVG recommended.
+
+          Favlogo:
+            label: Favicon
+            type: files
+            max: 1
+            layout: cards
+            uploads:
+              template: logo
+            help: Square icon for browser tab. SVG or PNG recommended.
+      social:
+        width: 1/2
+
+        fields:
+          instagram:
+            label: Instagram
+            type: url
+            width: 1/2                      
+
+          instagramLogo:
+            label: Instagram Logo
+            type: files
+            max: 1
+            layout: cards
+            uploads:
+              template: logo
+            width: 1/2
+
+          facebook:
+            label: Facebook
+            type: url
+            width: 1/2  
+
+          facebookLogo:
+            label: Facebook Logo
+            type: files
+            max: 1
+            layout: cards
+            uploads:
+              template: logo
+            width: 1/2
+
+          Twitter:
+            label: Twitter
+            type: url
+            width: 1/2
+
+          TwitterLogo:
+            label: Twitter Logo
+            type: files
+            max: 1
+            layout: cards
+            uploads:
+              template: logo
+            width: 1/2

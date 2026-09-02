@@ -1,0 +1,22 @@
+name: Media
+icon: image
+
+fields:
+  images:
+    label: Upload Images
+    type: files
+    multiple: true
+    layout: cards
+    query: page.files
+    uploads:
+      template: image
+
+  selected:
+    label: Select Image
+    type: select
+    empty: Upload images first
+    options:
+      type: query
+      query: page.images
+      text: "{{ file.filename }}"
+      value: "{{ file.id }}"

@@ -1,0 +1,12 @@
+{
+  "name": "local/media-fallback",
+  "description": "Local thumbnail fallback when GD/Imagick is unavailable",
+  "type": "kirby-plugin",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Local"
+    }
+  ]
+}

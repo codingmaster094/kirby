@@ -1,0 +1,39 @@
+name: Coach
+icon: user
+preview: fields
+wysiwyg: true
+
+fields:
+  image:
+    label: Coach Image
+    type: files
+    max: 1
+    layout: cards
+    query: page.files
+    uploads:
+      template: image
+
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: MEET THE FOUNDER
+
+  heading:
+    label: Heading
+    type: textarea
+    buttons: false
+    default: Built on Experience. Driven by Purpose.
+
+  description:
+    label: Description
+    type: textarea
+    buttons: false
+
+  certifications:
+    label: Certifications
+    type: structure
+    fields:
+      name:
+        label: Certification
+        type: text
+        required: true

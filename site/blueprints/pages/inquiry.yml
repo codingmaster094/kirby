@@ -1,0 +1,31 @@
+title: Inquiry
+icon: email
+
+options:
+  preview: false
+  changeSlug: false
+  changeTemplate: false
+  duplicate: false
+
+fields:
+  received:
+    label: Received
+    type: text
+    disabled: true
+  email:
+    label: Email
+    type: email
+    disabled: true
+  phone:
+    label: Phone
+    type: text
+    disabled: true
+  goal:
+    label: Goal
+    type: text
+    disabled: true
+  message:
+    label: Message
+    type: textarea
+    size: medium
+    disabled: true

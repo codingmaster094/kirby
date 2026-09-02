@@ -1,0 +1,5 @@
+Uuid: frf39etqwemm8ay7
+
+----
+
+Template: image

@@ -1,0 +1,5 @@
+Uuid: sgowgzxd8pbfbze6
+
+----
+
+Template: image

@@ -1,0 +1,50 @@
+name: Hero
+icon: image
+preview: fields
+wysiwyg: true
+
+fields:
+  heading:
+    label: Heading
+    type: text
+    required: true
+  description:
+    label: Description
+    type: textarea
+    size: medium
+  image:
+    label: Banner image
+    type: files
+    max: 1
+    layout: cards
+    query: page.files.filterBy('type', 'image')
+    uploads:
+      template: image
+    help: Used as the hero image, or as the video poster when a video is uploaded.
+  video:
+    label: Banner video
+    type: files
+    max: 1
+    layout: cards
+    query: page.files.filterBy('type', 'video')
+    uploads:
+      template: video
+    help: Optional. Autoplays muted in a loop. Falls back to the banner image if empty.
+  primaryText:
+    label: Primary button text
+    type: text
+    width: 1/2
+    default: Learn More
+  primaryLink:
+    label: Primary button link
+    type: link
+    width: 1/2
+  secondaryText:
+    label: Secondary button text
+    type: text
+    width: 1/2
+    default: Our Services
+  secondaryLink:
+    label: Secondary button link
+    type: link
+    width: 1/2

@@ -1,0 +1,64 @@
+Title: Terms and Conditions
+
+----
+
+Eyebrow: Legal
+
+----
+
+Heading: Terms and Conditions
+
+----
+
+Text:
+
+## Agreement
+
+By using the IronPace Coaching website and services, you agree to these Terms and Conditions. If you do not agree, please do not use our services.
+
+## Coaching Services
+
+IronPace provides personalized fitness and running coaching. Results vary by individual effort, consistency, health status, and other factors. We do not guarantee specific race times, body composition changes, or performance outcomes.
+
+## Eligibility
+
+You confirm that you are physically able to participate in training recommendations and that you will consult a medical professional when needed before starting a new fitness program.
+
+## Payments and Plans
+
+Paid coaching plans are billed according to the selected package. Fees are generally non-refundable once a billing cycle or coaching block has started, unless otherwise agreed in writing.
+
+## Client Responsibilities
+
+You agree to:
+
+- Provide accurate information about your health and training history
+- Follow safety guidance and use proper form
+- Communicate injuries, pain, or limitations promptly
+- Not share your coaching plan with others without permission
+
+## Intellectual Property
+
+All website content, training materials, branding, and coaching plans remain the property of IronPace Coaching and may not be copied or redistributed without permission.
+
+## Limitation of Liability
+
+To the fullest extent permitted by law, IronPace Coaching is not liable for injuries, losses, or damages arising from your use of our website or training recommendations.
+
+## Termination
+
+We may suspend or end coaching services if these terms are violated, payments fail, or continued coaching is no longer appropriate.
+
+## Contact
+
+For questions about these Terms and Conditions, contact:
+
+Email: coach@ironpace.com
+
+## Updates
+
+We may update these terms periodically. Continued use of the site or services after updates means you accept the revised terms.
+
+----
+
+Uuid: m4w8sqh5t9d9jkgc

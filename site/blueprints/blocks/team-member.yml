@@ -1,0 +1,32 @@
+name: Team Member
+icon: user
+preview: fields
+wysiwyg: true
+
+fields:
+  name:
+    label: Name
+    type: text
+    required: true
+
+  position:
+    label: Position
+    type: text
+
+  image:
+    label: Profile Image
+    type: files
+    max: 1
+    layout: cards
+    query: page.files
+    uploads:
+      template: image
+
+  description:
+    label: Description
+    type: textarea
+    size: medium
+
+  linkedin:
+    label: LinkedIn URL
+    type: url

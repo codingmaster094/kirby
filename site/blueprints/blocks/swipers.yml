@@ -1,0 +1,29 @@
+name: Swipers
+icon: layers
+
+fields:
+  title:
+    label: Title
+    type: text
+
+  slides:
+    label: Slides
+    type: structure
+    fields:
+      image:
+        label: Image
+        type: files
+        max: 1
+        query: page.images
+
+      heading:
+        label: Heading
+        type: text
+
+      description:
+        label: Description
+        type: textarea
+
+      link:
+        label: Link
+        type: url

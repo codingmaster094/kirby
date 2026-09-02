@@ -1,0 +1,19 @@
+title: Video
+
+accept:
+  maxsize: 104857600
+  mime:
+    - video/mp4
+    - video/webm
+    - video/ogg
+    - video/quicktime
+  extension:
+    - mp4
+    - webm
+    - ogv
+    - mov
+
+options:
+  delete: true
+  replace: true
+  changeName: true

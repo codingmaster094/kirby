@@ -1,0 +1,37 @@
+name: FAQ
+icon: question
+preview: fields
+wysiwyg: true
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: FAQ
+
+  heading:
+    label: Heading
+    type: text
+    required: true
+    default: Questions, answered
+
+  description:
+    label: Description
+    type: textarea
+    size: small
+    buttons: false
+
+  items:
+    label: Questions
+    type: structure
+    fields:
+      question:
+        label: Question
+        type: text
+        required: true
+      answer:
+        label: Answer
+        type: textarea
+        required: true
+        size: medium
+        buttons: false

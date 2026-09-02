@@ -1,0 +1,26 @@
+title: Legal Page
+icon: text
+
+options:
+  preview: "{{ page.url }}"
+
+status:
+  draft:
+    label: Draft
+  unlisted:
+    label: Unlisted
+    text: Shown in the footer Legal column, not in the header menu.
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Legal
+  heading:
+    label: Heading
+    type: text
+  text:
+    label: Content
+    type: textarea
+    size: huge
+    help: Write the full policy content. Kirbytext is supported.
