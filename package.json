@@ -1,7 +1,10 @@
 {
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/css/output.css"
+    "dev": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./src/input.css -o ./assets/css/output.css --watch",
+    "build": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./src/input.css -o ./assets/css/output.css"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
