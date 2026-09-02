@@ -1,0 +1,34 @@
+name: Error page
+icon: alert
+preview: fields
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: 404
+  heading:
+    label: Heading
+    type: text
+    required: true
+  text:
+    label: Message
+    type: textarea
+    size: medium
+  primaryText:
+    label: Primary button text
+    type: text
+    default: Back to Home
+    width: 1/2
+  primaryLink:
+    label: Primary button link
+    type: link
+    width: 1/2
+  secondaryText:
+    label: Secondary button text
+    type: text
+    width: 1/2
+  secondaryLink:
+    label: Secondary button link
+    type: link
+    width: 1/2

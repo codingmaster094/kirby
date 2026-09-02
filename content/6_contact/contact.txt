@@ -2,6 +2,10 @@ Title: Contact
 
 ----
 
+Layout: [{"attrs":[],"columns":[{"blocks":[{"content":{"eyebrow":"Book a Call","heading":"Let's build your next breakthrough","description":"Book a free strategy call and get a clear plan based on your goals, schedule, and current fitness.","email":"coach@ironpace.com","phone":"+1 (555) 012-3456","points":[{"text":"30-minute strategy call"},{"text":"Goal and schedule review"},{"text":"Recommended coaching path"},{"text":"No pressure, clear next steps"}],"formheading":"Send a message","formsuccess":"Thanks — we received your message and will get back to you shortly.","formgoals":[{"text":"First 5K or 10K"},{"text":"Half / full marathon"},{"text":"Speed and PRs"},{"text":"Strength and injury-resilient training"},{"text":"Other"}],"bookingheading":"Book a strategy call","bookingdescription":"Pick a time that works. We’ll review your goals, schedule, and current training, then map a clear next step.","bookingurl":""},"id":"smfck5ha3ccxgwhb","isHidden":false,"type":"contact"}],"id":"mtjdhbpive6ely6p","width":"1/1"}],"id":"i0ck6ao0yhk4jsyg"}]
+
+----
+
 Eyebrow: Book a Call
 
 ----

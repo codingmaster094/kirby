@@ -2,7 +2,7 @@ Title: Blog
 
 ----
 
-Layout: [{"attrs":[],"columns":[{"blocks":[{"content":{"heading":"How Much Protein Do You Need to Build Muscle?","description":"Protein is a central piece of any fitness diet, but it’s remarkably easy to overcomplicate. Amid conflicting advice, from drinking shakes around the clock to ignoring intake entirely, the science of muscle growth is...","image":[],"video":["file://isrd7pm7sq9wqbeq"],"primarytext":"Learn More","primarylink":"","secondarytext":"Our Services","secondarylink":""},"id":"0cdc709e-8c66-4889-8b8e-b437c6e08120","isHidden":false,"type":"hero"}],"id":"e8f7e0b8-17b6-487f-85e0-a5b69d3a198e","width":"1/1"}],"id":"7d87d8ac-567d-4b6d-b5c0-fac6653e048f"}]
+Layout: [{"attrs":[],"columns":[{"blocks":[{"content":{"heading":"How Much Protein Do You Need to Build Muscle?","description":"Protein is a central piece of any fitness diet, but it’s remarkably easy to overcomplicate. Amid conflicting advice, from drinking shakes around the clock to ignoring intake entirely, the science of muscle growth is...","image":[],"video":["file://isrd7pm7sq9wqbeq"],"primarytext":"Learn More","primarylink":"","secondarytext":"Our Services","secondarylink":""},"id":"0cdc709e-8c66-4889-8b8e-b437c6e08120","isHidden":false,"type":"hero"}],"id":"e8f7e0b8-17b6-487f-85e0-a5b69d3a198e","width":"1/1"}],"id":"7d87d8ac-567d-4b6d-b5c0-fac6653e048f"},{"attrs":[],"columns":[{"blocks":[{"content":{"eyebrow":"Journal","heading":"Blog","description":"Blog Content","source":[]},"id":"ad1doqovd8myssds","isHidden":false,"type":"blog_posts"}],"id":"nemscl4dgvojah2h","width":"1/1"}],"id":"laqkpuo0nskarxtm"}]
 
 ----
 

@@ -1,0 +1,46 @@
+name: Programs
+icon: bolt
+preview: fields
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Coaching Programs
+  heading:
+    label: Heading
+    type: text
+    required: true
+  description:
+    label: Description
+    type: textarea
+    size: small
+    buttons: false
+  items:
+    label: Programs
+    type: structure
+    fields:
+      title:
+        label: Title
+        type: text
+        required: true
+      summary:
+        label: Summary
+        type: textarea
+        size: small
+        buttons: false
+      points:
+        label: Key points
+        type: structure
+        fields:
+          text:
+            label: Point
+            type: text
+      ctaText:
+        label: Button text
+        type: text
+        width: 1/2
+      ctaLink:
+        label: Button link
+        type: link
+        width: 1/2

@@ -1,0 +1,12 @@
+name: Page text
+icon: text
+preview: fields
+
+fields:
+  heading:
+    label: Heading
+    type: text
+  text:
+    label: Content
+    type: textarea
+    size: huge

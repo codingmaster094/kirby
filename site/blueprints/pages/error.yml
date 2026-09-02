@@ -7,34 +7,15 @@ options:
   delete: false
   preview: "{{ page.url }}"
 
-fields:
-  eyebrow:
-    label: Eyebrow
-    type: text
-    default: 404
-  heading:
-    label: Heading
-    type: text
-    default: This page is off the course
-  text:
-    label: Message
-    type: textarea
-    size: medium
-  primaryText:
-    label: Primary button text
-    type: text
-    default: Back to Home
-    width: 1/2
-  primaryLink:
-    label: Primary button link
-    type: link
-    width: 1/2
-  secondaryText:
-    label: Secondary button text
-    type: text
-    default: Contact
-    width: 1/2
-  secondaryLink:
-    label: Secondary button link
-    type: link
-    width: 1/2
+columns:
+  main:
+    width: 2/3
+    fields:
+      layout: fields/layout-sections
+  sidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      preview:
+        type: live-preview
+        label: Preview

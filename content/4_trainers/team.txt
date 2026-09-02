@@ -2,6 +2,10 @@ Title: Trainers
 
 ----
 
+Layout: [{"attrs":[],"columns":[{"blocks":[{"content":{"eyebrow":"Our team","heading":"Meet Our Trainers","description":"Expert Coaches. Personal Attention. Real Progress.\n\nOur trainers combine experience, structured training, and personalized guidance to help every member train with confidence and purpose.","members":"[{\"content\":{\"name\":\"Alex Carter\",\"position\":\"Head Fitness Coach\",\"image\":[\"file://frf39etqwemm8ay7\"],\"description\":\"8+ Years Experience\",\"linkedin\":\"\"},\"id\":\"67d66fcd-ec9e-46e5-96d4-6c7fa873e06c\",\"isHidden\":false,\"type\":\"team-member\"},{\"content\":{\"name\":\"Ryan Mitchell\",\"position\":\"Strength & Conditioning Coach\",\"image\":[\"file://ov2oj5ukldmf4je8\"],\"description\":\"6+ Years Experience\",\"linkedin\":\"\"},\"id\":\"aef9abab-84ac-4388-9326-b1dda98d36d9\",\"isHidden\":false,\"type\":\"team-member\"},{\"content\":{\"name\":\"Sophia Williams\",\"position\":\"Fitness & Wellness Coach\",\"image\":[\"file://rpddm0e3ophpk640\"],\"description\":\"5+ Years Experience\",\"linkedin\":\"\"},\"id\":\"6e5dffa9-2d69-405d-8383-f7162eb5e945\",\"isHidden\":false,\"type\":\"team-member\"}]"},"id":"kl2bdtdcxtheojj9","isHidden":false,"type":"team_section"}],"id":"hiho0h41gvdh7tyg","width":"1/1"}],"id":"xxk8s18xkdbsihjj"}]
+
+----
+
 Heading: Meet Our Trainers
 
 ----

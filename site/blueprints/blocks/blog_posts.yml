@@ -1,0 +1,24 @@
+name: Blog posts
+icon: page
+preview: fields
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Journal
+  heading:
+    label: Heading
+    type: text
+    default: Blog
+  description:
+    label: Description
+    type: textarea
+    size: small
+    buttons: false
+  source:
+    label: Posts source page
+    type: pages
+    max: 1
+    query: site.children.filterBy("intendedTemplate", "blog")
+    help: Leave empty to use the current page’s children.

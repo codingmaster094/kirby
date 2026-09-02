@@ -1,14 +1,7 @@
 <?php snippet('header') ?>
 
 <main class="flex-1">
-    <?php
-    snippet('layout');
-
-    if ($page->layout()->isEmpty()) {
-        snippet('sections/hero');
-        snippet('sections/benefits');
-    }
-    ?>
+    <?php snippet('layout') ?>
 </main>
 
 <?php snippet('footer') ?>

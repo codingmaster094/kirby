@@ -1,0 +1,63 @@
+name: Workout Guide
+icon: bolt
+preview: fields
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Workout Guide
+  heading:
+    label: Heading
+    type: text
+    required: true
+  description:
+    label: Description
+    type: textarea
+    size: medium
+  searchHelp:
+    label: Help text above suggestions
+    type: textarea
+    size: small
+    buttons: false
+  concerns:
+    label: Problems & workouts
+    type: structure
+    fields:
+      title:
+        label: Problem title
+        type: text
+        required: true
+      keywords:
+        label: Keywords
+        type: text
+      summary:
+        label: Short summary
+        type: textarea
+        size: small
+        buttons: false
+      focus:
+        label: What to focus on
+        type: textarea
+        size: small
+        buttons: false
+      exercises:
+        label: Exercises / steps
+        type: structure
+        fields:
+          name:
+            label: Exercise name
+            type: text
+            required: true
+          how:
+            label: How to do it
+            type: textarea
+            size: small
+            buttons: false
+            required: true
+          sets:
+            label: Sets / reps / time
+            type: text
+          tip:
+            label: Tip
+            type: text

@@ -4,100 +4,15 @@ icon: bolt
 options:
   preview: "{{ page.url }}"
 
-tabs:
-  layout:
-    label: Layout
-    icon: dashboard
-    columns:
-      main:
-        width: 2/3
-        fields:
-          layout: fields/layout-sections
-      sidebar:
-        width: 1/3
-        sticky: true
-        sections:
-          preview:
-            type: live-preview
-            label: Preview
-
-  content:
-    label: Content
-    icon: search
-    columns:
-      main:
-        width: 2/3
-        fields:
-          eyebrow:
-            label: Eyebrow
-            type: text
-            default: Workout Guide
-          heading:
-            label: Heading
-            type: text
-            default: Tell us your goal — we’ll show the steps
-          description:
-            label: Description
-            type: textarea
-            size: medium
-          searchHelp:
-            label: Help text above suggestions
-            type: textarea
-            size: small
-            buttons: false
-            default: Tap a suggestion below — for example Belly fat, Knee pain, or Improve stamina. We’ll show which exercises to do, how many sets/reps, and how to do each move step by step.
-          concerns:
-            label: Problems & workouts
-            type: structure
-            help: Each problem can match typed keywords. Add exercises with clear how-to steps.
-            fields:
-              title:
-                label: Problem title
-                type: text
-                required: true
-                placeholder: Belly fat
-              keywords:
-                label: Keywords
-                type: text
-                help: Optional notes for editors (not shown on the site).
-                placeholder: belly fat, tummy, stomach fat
-              summary:
-                label: Short summary
-                type: textarea
-                size: small
-                buttons: false
-              focus:
-                label: What to focus on
-                type: textarea
-                size: small
-                buttons: false
-                help: Shown as “Focus on” bullets or paragraph.
-              exercises:
-                label: Exercises / steps
-                type: structure
-                fields:
-                  name:
-                    label: Exercise name
-                    type: text
-                    required: true
-                  how:
-                    label: How to do it
-                    type: textarea
-                    size: small
-                    buttons: false
-                    required: true
-                  sets:
-                    label: Sets / reps / time
-                    type: text
-                    placeholder: 3 sets × 12 reps
-                  tip:
-                    label: Tip
-                    type: text
-
-      sidebar:
-        width: 1/3
-        sticky: true
-        sections:
-          preview:
-            type: live-preview
-            label: Preview
+columns:
+  main:
+    width: 2/3
+    fields:
+      layout: fields/layout-sections
+  sidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      preview:
+        type: live-preview
+        label: Preview

@@ -1,0 +1,22 @@
+name: Team section
+icon: users
+preview: fields
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Our team
+  heading:
+    label: Heading
+    type: text
+    required: true
+  description:
+    label: Description
+    type: textarea
+    size: medium
+  members:
+    label: Team Members
+    type: blocks
+    fieldsets:
+      - team-member

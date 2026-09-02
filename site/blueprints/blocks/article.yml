@@ -1,0 +1,26 @@
+name: Article
+icon: text
+preview: fields
+
+fields:
+  heading:
+    label: Heading
+    type: text
+    help: Leave empty to use the page title.
+  description:
+    label: Short description
+    type: textarea
+    size: medium
+  cover:
+    label: Cover image
+    type: files
+    multiple: false
+    layout: cards
+    query: page.parent.files.add(page.files)
+    uploads:
+      parent: page
+      template: image
+  body:
+    label: Content
+    type: textarea
+    size: huge

@@ -55,6 +55,21 @@ return function ($kirby, $page) {
 
 			$to = trim((string) $page->email()->value());
 
+			if ($page->layout()->isNotEmpty()) {
+				foreach ($page->layout()->toLayouts() as $layout) {
+					foreach ($layout->columns() as $column) {
+						foreach ($column->blocks() as $block) {
+							if ($block->type() === 'contact') {
+								$fromBlock = trim((string) $block->email()->value());
+								if ($fromBlock !== '') {
+									$to = $fromBlock;
+								}
+							}
+						}
+					}
+				}
+			}
+
 			if ($to !== '') {
 				try {
 					$kirby->email([

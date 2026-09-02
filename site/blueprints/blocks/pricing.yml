@@ -1,0 +1,56 @@
+name: Pricing
+icon: money
+preview: fields
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Pricing
+  heading:
+    label: Heading
+    type: text
+    required: true
+  description:
+    label: Description
+    type: textarea
+    size: small
+    buttons: false
+  featuredLabel:
+    label: Featured badge text
+    type: text
+    default: Most popular
+  items:
+    label: Plans
+    type: structure
+    fields:
+      name:
+        label: Plan name
+        type: text
+        required: true
+      price:
+        label: Price
+        type: text
+        required: true
+      blurb:
+        label: Short description
+        type: text
+      featured:
+        label: Highlight this plan
+        type: toggle
+        default: false
+      features:
+        label: Features
+        type: structure
+        fields:
+          text:
+            label: Feature
+            type: text
+      ctaText:
+        label: Button text
+        type: text
+        width: 1/2
+      ctaLink:
+        label: Button link
+        type: link
+        width: 1/2

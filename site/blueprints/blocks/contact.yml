@@ -1,0 +1,57 @@
+name: Contact
+icon: email
+preview: fields
+
+fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Book a Call
+  heading:
+    label: Heading
+    type: text
+    required: true
+  description:
+    label: Description
+    type: textarea
+    size: medium
+  email:
+    label: Contact email
+    type: email
+    width: 1/2
+  phone:
+    label: Phone / WhatsApp
+    type: text
+    width: 1/2
+  points:
+    label: What to expect
+    type: structure
+    fields:
+      text:
+        label: Point
+        type: text
+  formHeading:
+    label: Form heading
+    type: text
+    default: Send a message
+  formSuccess:
+    label: Success message
+    type: text
+  formGoals:
+    label: Goal options
+    type: structure
+    fields:
+      text:
+        label: Goal
+        type: text
+  bookingHeading:
+    label: Booking heading
+    type: text
+  bookingDescription:
+    label: Booking description
+    type: textarea
+    size: small
+    buttons: false
+  bookingUrl:
+    label: Booking URL
+    type: url

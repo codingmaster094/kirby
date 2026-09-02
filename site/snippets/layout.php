@@ -22,8 +22,10 @@ foreach ($page->$field()->toLayouts() as $layout) {
 			}
 
 			snippet('blocks/' . $block->type(), [
-				'block' => $block,
-				'page'  => $page,
+				'block'   => $block,
+				'page'    => $page,
+				'alert'   => $alert ?? null,
+				'success' => $success ?? null,
 			]);
 		}
 	}

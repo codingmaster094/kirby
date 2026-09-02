@@ -2,6 +2,10 @@ Title: Page not found
 
 ----
 
+Layout: [{"attrs":[],"columns":[{"blocks":[{"content":{"eyebrow":"404","heading":"This page is off the course","text":"The link you followed doesn’t exist — or the workout moved. Head home or get in touch and we’ll point you in the right direction.","primarytext":"Back to Home","primarylink":"/","secondarytext":"Contact","secondarylink":"page://g4xzcsot7mak6oor"},"id":"krn5hnha6m0azl2d","isHidden":false,"type":"error_page"}],"id":"2nyfu93xheuhcwyx","width":"1/1"}],"id":"aike5t1hz2fvsplg"}]
+
+----
+
 Eyebrow: 404
 
 ----

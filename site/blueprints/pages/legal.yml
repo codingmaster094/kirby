@@ -11,36 +11,15 @@ status:
     label: Unlisted
     text: Shown in the footer Legal column, not in the header menu.
 
-tabs:
-  layout:
-    label: Layout
-    icon: dashboard
-    columns:
-      main:
-        width: 2/3
-        fields:
-          layout: fields/layout-sections
-      sidebar:
-        width: 1/3
-        sticky: true
-        sections:
-          preview:
-            type: live-preview
-            label: Preview
-
-  content:
-    label: Content
-    icon: text
+columns:
+  main:
+    width: 2/3
     fields:
-      eyebrow:
-        label: Eyebrow
-        type: text
-        default: Legal
-      heading:
-        label: Heading
-        type: text
-      text:
-        label: Content
-        type: textarea
-        size: huge
-        help: Write the full policy content. Kirbytext is supported.
+      layout: fields/layout-sections
+  sidebar:
+    width: 1/3
+    sticky: true
+    sections:
+      preview:
+        type: live-preview
+        label: Preview

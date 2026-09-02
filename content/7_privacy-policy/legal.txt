@@ -2,6 +2,10 @@ Title: Privacy Policy
 
 ----
 
+Layout: [{"attrs":[],"columns":[{"blocks":[{"content":{"eyebrow":"Legal","heading":"Privacy Policy","text":"## Overview\n\nIronPace Coaching (\"we\", \"us\", or \"our\") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our website and coaching services.\n\n## Information We Collect\n\nWe may collect:\n\n- Name, email address, and phone number\n- Fitness goals, training history, and coaching preferences\n- Website usage data such as pages visited and device type\n- Messages you send through forms or email\n\n## How We Use Your Information\n\nWe use your information to:\n\n- Provide coaching services and respond to inquiries\n- Improve our website and training experience\n- Send service-related updates you request\n- Maintain security and prevent misuse\n\n## Cookies\n\nOur website may use cookies or similar technologies to improve browsing experience and remember preferences. You can manage cookie consent through the banner on our site.\n\n## Sharing of Information\n\nWe do not sell your personal information. We may share data only with trusted service providers who help us operate the website or coaching platform, or when required by law.\n\n## Data Retention\n\nWe keep your information only as long as needed for coaching services, legal obligations, or legitimate business purposes.\n\n## Your Rights\n\nYou may request access, correction, or deletion of your personal information by contacting us at coach@ironpace.com.\n\n## Contact\n\nIf you have questions about this Privacy Policy, contact us at:\n\nEmail: coach@ironpace.com\n\n## Updates\n\nWe may update this Privacy Policy from time to time. The latest version will always be available on this page."},"id":"c3ktyikw6vtbsspo","isHidden":false,"type":"legal_content"}],"id":"sk12ocqdel4xjgxp","width":"1/1"}],"id":"pq20llleflslrlsp"}]
+
+----
+
 Eyebrow: Legal
 
 ----
