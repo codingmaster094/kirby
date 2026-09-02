@@ -21,8 +21,13 @@ fi
 # Honor Render's forwarded proto inside Apache/PHP
 cat >/etc/apache2/conf-available/render-proxy.conf <<EOF
 SetEnvIf X-Forwarded-Proto https HTTPS=on
-PassEnv KIRBY_URL KIRBY_DEBUG KIRBY_EMAIL_FROM
+PassEnv KIRBY_URL KIRBY_DEBUG KIRBY_EMAIL_FROM KIRBY_PANEL_INSTALL
 EOF
 a2enconf render-proxy >/dev/null
+
+# Ensure Panel can create the first account on a fresh container.
+mkdir -p /var/www/html/site/accounts /var/www/html/site/sessions /var/www/html/site/cache /var/www/html/media
+chown -R www-data:www-data /var/www/html/site/accounts /var/www/html/site/sessions /var/www/html/site/cache /var/www/html/media
+chmod -R ug+rwX /var/www/html/site/accounts /var/www/html/site/sessions /var/www/html/site/cache /var/www/html/media
 
 exec apache2-foreground
