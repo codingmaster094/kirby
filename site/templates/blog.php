@@ -1,30 +1,7 @@
 <?php snippet('header') ?>
 
 <main class="flex-1">
-    <?php
-    $rendered = false;
-
-    foreach ($page->layout()->toLayouts() as $layout) {
-        foreach ($layout->columns() as $column) {
-            foreach ($column->blocks() as $block) {
-                if ($block->isHidden()) {
-                    continue;
-                }
-
-                snippet('blocks/' . $block->type(), [
-                    'block' => $block,
-                    'page'  => $page,
-                ]);
-
-                $rendered = true;
-            }
-        }
-    }
-
-    if ($rendered === false) {
-        snippet('sections/hero');
-    }
-    ?>
+    <?php snippet('layout') ?>
 
     <section class="border-t border-slate-200 bg-white">
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-10">
@@ -40,35 +17,35 @@
                 <?php endif ?>
             </div>
 
-            <div class="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div class="mt-12 grid auto-rows-fr gap-8 md:grid-cols-2 xl:grid-cols-3">
                 <?php foreach ($page->children()->listed() as $post): ?>
-                    <a href="<?= $post->url() ?>" class="reveal group">
-                        <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 group-hover:-translate-y-1 group-hover:shadow-xl">
+                    <a href="<?= $post->url() ?>" class="reveal group flex h-full">
+                        <article class="flex h-full w-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition duration-300 group-hover:-translate-y-1 group-hover:shadow-xl">
                             <?php if ($image = $post->cover()->toFile()): ?>
                                 <img
                                     src="<?= esc($image->url()) ?>"
                                     alt="<?= esc((string) $post->title()->value()) ?>"
-                                    class="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+                                    class="h-56 w-full shrink-0 object-cover transition duration-500 group-hover:scale-105"
                                     loading="lazy"
                                 >
                             <?php else: ?>
-                                <div class="grid h-56 place-items-center bg-slate-100 text-sm text-slate-500">
+                                <div class="grid h-56 shrink-0 place-items-center bg-slate-100 text-sm text-slate-500">
                                     No cover image
                                 </div>
                             <?php endif ?>
 
-                            <div class="p-6">
-                                <h2 class="text-xl font-bold text-ink transition group-hover:text-slate-700">
+                            <div class="flex flex-1 flex-col p-6">
+                                <h2 class="line-clamp-2 min-h-[3.5rem] text-xl font-bold leading-7 text-ink transition group-hover:text-slate-700">
                                     <?= esc((string) $post->title()->value()) ?>
                                 </h2>
 
-                                <?php if ($post->description()->isNotEmpty()): ?>
-                                    <p class="mt-2 line-clamp-3 text-sm leading-6 text-slate-600">
+                                <p class="mt-2 line-clamp-3 min-h-[4.5rem] text-sm leading-6 text-slate-600">
+                                    <?php if ($post->description()->isNotEmpty()): ?>
                                         <?= esc((string) $post->description()->value()) ?>
-                                    </p>
-                                <?php endif ?>
+                                    <?php endif ?>
+                                </p>
 
-                                <span class="mt-4 inline-flex text-sm font-bold text-ink">
+                                <span class="mt-auto inline-flex pt-4 text-sm font-bold text-ink">
                                     Read article →
                                 </span>
                             </div>

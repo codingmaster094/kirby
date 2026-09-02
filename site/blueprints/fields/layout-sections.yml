@@ -1,0 +1,16 @@
+label: Layout
+type: layout
+help: Click + to add sections. Drag to reorder. These blocks appear on the page above the page content.
+layouts:
+  - "1/1"
+fieldsets:
+  - hero
+  - benefits
+  - media
+  - swipers
+  - whyUs
+  - coach
+  - transformations
+  - method_in_action
+  - faq
+  - cta

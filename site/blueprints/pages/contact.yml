@@ -5,8 +5,25 @@ options:
   preview: "{{ page.url }}"
 
 tabs:
+  layout:
+    label: Layout
+    icon: dashboard
+    columns:
+      main:
+        width: 2/3
+        fields:
+          layout: fields/layout-sections
+      sidebar:
+        width: 1/3
+        sticky: true
+        sections:
+          preview:
+            type: live-preview
+            label: Preview
+
   content:
     label: Content
+    icon: text
     columns:
       main:
         width: 2/3

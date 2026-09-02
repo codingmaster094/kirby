@@ -1,5 +1,5 @@
 name: FAQ
-icon: question
+icon: chat
 preview: fields
 wysiwyg: true
 
@@ -12,7 +12,6 @@ fields:
   heading:
     label: Heading
     type: text
-    required: true
     default: Questions, answered
 
   description:
@@ -28,10 +27,8 @@ fields:
       question:
         label: Question
         type: text
-        required: true
       answer:
         label: Answer
         type: textarea
-        required: true
         size: medium
         buttons: false

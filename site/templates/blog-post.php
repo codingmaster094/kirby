@@ -1,6 +1,8 @@
 <?php snippet('header') ?>
 
 <main class="flex-1 bg-white">
+    <?php snippet('layout') ?>
+
     <article class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-10">
         <div class="reveal">
             <p class="text-xs font-bold uppercase tracking-[0.22em] text-slate-500">Article</p>

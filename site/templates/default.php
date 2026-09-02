@@ -1,6 +1,8 @@
 <?php snippet('header') ?>
 
 <main class="flex-1">
+    <?php snippet('layout') ?>
+
     <section class="relative overflow-hidden">
         <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37,99,235,0.12),_transparent_50%)]"></div>
         <div class="relative mx-auto max-w-3xl px-5 py-20">

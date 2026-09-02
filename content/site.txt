@@ -22,7 +22,7 @@ Footerlinks:
   text: Pricing
   link: page://lfzpipbmggy7cin4
 - 
-  text: Team
+  text: Trainers
   link: page://teampage00000001
 - 
   text: Blog

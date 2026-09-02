@@ -1,6 +1,8 @@
 <?php snippet('header') ?>
 
 <main class="flex-1">
+    <?php snippet('layout') ?>
+
     <section class="bg-ink px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
         <div class="mx-auto max-w-7xl">
             <div class="reveal max-w-3xl">

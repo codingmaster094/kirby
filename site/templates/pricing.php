@@ -1,6 +1,8 @@
 <?php snippet('header') ?>
 
 <main class="flex-1 bg-ink">
+    <?php snippet('layout') ?>
+
     <section class="px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
         <div class="reveal mx-auto max-w-3xl text-center">
             <?php if ($page->eyebrow()->isNotEmpty()): ?>

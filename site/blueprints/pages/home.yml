@@ -1,62 +1,18 @@
 title: Home
 
 options:
-
   preview: "{{ page.url }}"
 
 columns:
-
   main:
-
     width: 2/3
-
     fields:
-
-      layout:
-
-        label: Layout
-
-        type: layout
-
-        help: Click + to add blocks. Drag to reorder.
-
-        layouts:
-
-          - "1/1"
-
-        fieldsets:
-
-          - hero
-
-          - benefits
-
-          - media
-
-          - swipers
-
-          - whyUs
-
-          - coach
-
-          - transformations
-
-          - method_in_action
-
-          - faq
-
-          - cta
+      layout: fields/layout-sections
 
   sidebar:
-
     width: 1/3
-
     sticky: true
-
     sections:
-
       preview:
-
         type: live-preview
-
         label: Preview
-

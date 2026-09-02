@@ -8,6 +8,8 @@ $formHeading = (string) $page->formHeading()->or('Send a message')->value();
 ?>
 
 <main class="flex-1 bg-ink">
+    <?php snippet('layout') ?>
+
     <section id="contact" class="px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
         <div class="reveal mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-start">
             <div>

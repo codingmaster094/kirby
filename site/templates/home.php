@@ -2,26 +2,9 @@
 
 <main class="flex-1">
     <?php
-    $rendered = false;
+    snippet('layout');
 
-    foreach ($page->layout()->toLayouts() as $layout) {
-        foreach ($layout->columns() as $column) {
-            foreach ($column->blocks() as $block) {
-                if ($block->isHidden()) {
-                    continue;
-                }
-
-                snippet('blocks/' . $block->type(), [
-                    'block' => $block,
-                    'page'  => $page,
-                ]);
-
-                $rendered = true;
-            }
-        }
-    }
-
-    if ($rendered === false) {
+    if ($page->layout()->isEmpty()) {
         snippet('sections/hero');
         snippet('sections/benefits');
     }

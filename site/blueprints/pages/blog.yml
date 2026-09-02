@@ -1,5 +1,8 @@
 title: Blog
 
+options:
+  preview: "{{ page.url }}"
+
 columns:
   main:
     width: 2/3
@@ -7,19 +10,7 @@ columns:
       content:
         type: fields
         fields:
-          layout:
-            label: Layout
-            type: layout
-            help: Click + to add Hero, Benefits, Media, or Swipers. Drag blocks to reorder.
-            layouts:
-              - "1/1"
-            fieldsets:
-              - hero
-              - benefits
-              - media
-              - swipers
-              - faq
-              - cta
+          layout: fields/layout-sections
       posts:
         type: pages
         label: Blog Posts

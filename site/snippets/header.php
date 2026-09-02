@@ -45,26 +45,23 @@ $page = page();
         <a href="<?= $site->url() ?>" class="flex shrink-0 items-center">
             <?php snippet('site-logo', ['variant' => 'header']) ?>
         </a>
-
         <nav class="hidden items-center gap-1 text-sm font-semibold text-slate-600 md:flex">
             <?php foreach ($site->children()->listed()->filterBy('intendedTemplate', '!=', 'legal') as $item): ?>
                 <a
                     href="<?= $item->url() ?>"
-                    class="rounded-full px-4 py-2 transition hover:bg-slate-800 hover:text-white <?= e($item->isOpen(), 'bg-ink text-white hover:bg-black hover:text-black') ?>"
+                    class="nav-link px-4 py-2 transition hover:text-ink <?= e($item->isOpen(), 'nav-link-active') ?>"
                     <?= e($item->isOpen(), 'aria-current="page"') ?>
                 >
                     <?= esc($item->title()->value()) ?>
                 </a>
             <?php endforeach ?>
         </nav>
-
         <a
             href="<?= ($site->find('contact') ?? $site->homePage())->url() ?>"  
             class="btn-lime hidden rounded-full px-5 py-2.5 text-sm font-bold md:inline-flex"
         >
             Book a Call
         </a>
-
         <button
             type="button"
             id="menu-open"
@@ -104,7 +101,7 @@ $page = page();
         <?php foreach ($site->children()->listed()->filterBy('intendedTemplate', '!=', 'legal') as $item): ?>
             <a
                 href="<?= $item->url() ?>"
-                class="rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-100 hover:text-ink <?= e($item->isOpen(), 'bg-ink text-white hover:bg-black hover:text-white') ?>"
+                class="rounded-xl px-4 py-3 text-slate-600 transition hover:bg-slate-100 hover:text-ink <?= e($item->isOpen(), 'border-l-4 border-lime bg-slate-50 text-ink') ?>"
                 <?= e($item->isOpen(), 'aria-current="page"') ?>
             >
                 <?= esc($item->title()->value()) ?>

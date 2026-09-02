@@ -4,63 +4,83 @@ icon: money
 options:
   preview: "{{ page.url }}"
 
-columns:
-  main:
-    width: 2/3
-    fields:
-      eyebrow:
-        label: Eyebrow
-        type: text
-        default: Pricing
-      heading:
-        label: Heading
-        type: text
-        default: Simple plans. Serious coaching.
-      description:
-        label: Description
-        type: textarea
-        size: medium
-      plans:
-        label: Plans
-        type: structure
+tabs:
+  layout:
+    label: Layout
+    icon: dashboard
+    columns:
+      main:
+        width: 2/3
         fields:
-          name:
-            label: Plan name
+          layout: fields/layout-sections
+      sidebar:
+        width: 1/3
+        sticky: true
+        sections:
+          preview:
+            type: live-preview
+            label: Preview
+
+  content:
+    label: Content
+    icon: text
+    columns:
+      main:
+        width: 2/3
+        fields:
+          eyebrow:
+            label: Eyebrow
             type: text
-            required: true
-          price:
-            label: Price
+            default: Pricing
+          heading:
+            label: Heading
             type: text
-            required: true
-            placeholder: $149/mo
-          blurb:
-            label: Short description
-            type: text
-          featured:
-            label: Highlight this plan
-            type: toggle
-            default: false
-          features:
-            label: Features
+            default: Simple plans. Serious coaching.
+          description:
+            label: Description
+            type: textarea
+            size: medium
+          plans:
+            label: Plans
             type: structure
             fields:
-              text:
-                label: Feature
+              name:
+                label: Plan name
                 type: text
-          ctaText:
-            label: Button text
-            type: text
-            default: Get Started
-            width: 1/2
-          ctaLink:
-            label: Button link
-            type: link
-            width: 1/2
+                required: true
+              price:
+                label: Price
+                type: text
+                required: true
+                placeholder: $149/mo
+              blurb:
+                label: Short description
+                type: text
+              featured:
+                label: Highlight this plan
+                type: toggle
+                default: false
+              features:
+                label: Features
+                type: structure
+                fields:
+                  text:
+                    label: Feature
+                    type: text
+              ctaText:
+                label: Button text
+                type: text
+                default: Get Started
+                width: 1/2
+              ctaLink:
+                label: Button link
+                type: link
+                width: 1/2
 
-  sidebar:
-    width: 1/3
-    sticky: true
-    sections:
-      preview:
-        type: live-preview
-        label: Preview
+      sidebar:
+        width: 1/3
+        sticky: true
+        sections:
+          preview:
+            type: live-preview
+            label: Preview

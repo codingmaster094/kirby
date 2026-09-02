@@ -126,10 +126,75 @@
     </div>
 </footer>
 
+<button
+    type="button"
+    id="back-to-top"
+    class="back-to-top"
+    aria-label="Back to top"
+    title="Back to top"
+>
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
 <?php snippet('cookie-consent') ?>
 
 <script>
     (function () {
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const smoothScrollTo = function (targetY, duration) {
+            const startY = window.scrollY || window.pageYOffset || 0;
+            const endY = Math.max(0, targetY);
+            const distance = endY - startY;
+
+            if (!distance) {
+                return;
+            }
+
+            if (reduceMotion || duration <= 0) {
+                window.scrollTo(0, endY);
+                return;
+            }
+
+            const startTime = performance.now();
+            const easeOutCubic = function (t) {
+                return 1 - Math.pow(1 - t, 3);
+            };
+
+            const step = function (now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                window.scrollTo(0, startY + distance * easeOutCubic(progress));
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            };
+
+            requestAnimationFrame(step);
+        };
+
+        const backToTop = document.getElementById('back-to-top');
+
+        if (backToTop) {
+            const toggleBackToTop = function () {
+                if (window.scrollY > 400) {
+                    backToTop.classList.add('is-visible');
+                } else {
+                    backToTop.classList.remove('is-visible');
+                }
+            };
+
+            window.addEventListener('scroll', toggleBackToTop, { passive: true });
+            toggleBackToTop();
+
+            backToTop.addEventListener('click', function (event) {
+                event.preventDefault();
+                smoothScrollTo(0, 700);
+            });
+        }
+
         const openBtn = document.getElementById('menu-open');
         const closeBtn = document.getElementById('menu-close');
         const sidebar = document.getElementById('mobile-sidebar');
@@ -163,11 +228,11 @@
             });
         }
 
-        document.querySelectorAll('[data-scroll]').forEach(function (anchor) {
+        document.querySelectorAll('[data-scroll], a[href^="#"]').forEach(function (anchor) {
             anchor.addEventListener('click', function (event) {
                 const targetId = anchor.getAttribute('href');
 
-                if (!targetId || !targetId.startsWith('#')) {
+                if (!targetId || targetId === '#' || !targetId.startsWith('#')) {
                     return;
                 }
 
@@ -178,14 +243,16 @@
                 }
 
                 event.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const header = document.querySelector('header');
+                const offset = header ? header.offsetHeight + 12 : 0;
+                const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                smoothScrollTo(top, 700);
             });
         });
 
         const revealItems = Array.prototype.slice.call(
             document.querySelectorAll('.reveal, .tf-reveal')
         );
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         if (!revealItems.length || reduceMotion || !('IntersectionObserver' in window)) {
             revealItems.forEach(function (item) {
