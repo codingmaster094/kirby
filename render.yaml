@@ -1,0 +1,20 @@
+# Render Blueprint — Kirby must run as Docker (PHP/Apache), not Node.
+# If an existing service was created as Node + `npm run dev`, change it in the
+# Dashboard to Docker (or recreate from this blueprint). Do not use npm as Start Command.
+services:
+  - type: web
+    name: kirby
+    runtime: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: KIRBY_DEBUG
+        value: "false"
+      - key: KIRBY_PANEL_INSTALL
+        value: "true"
+      # Optional: set explicitly if auto RENDER_EXTERNAL_URL is not enough
+      # - key: KIRBY_URL
+      #   sync: false
