@@ -2,7 +2,6 @@ title: Blog
 
 options:
   preview: "{{ page.url }}"
-
 columns:
   main:
     width: 2/3
@@ -17,7 +16,6 @@ columns:
         template: blog-post
         layout: cards
         size: small
-
   sidebar:
     width: 1/3
     sticky: true

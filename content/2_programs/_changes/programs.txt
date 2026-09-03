@@ -1,0 +1,75 @@
+Title: Programs
+
+----
+
+Layout: [{"attrs":[],"columns":[{"blocks":[{"content":{"eyebrow":"Coaching Programs","heading":"Training built around your goals","description":"Choose a coaching track that matches your experience, schedule, and race targets.","items":[{"title":"1:1 Performance Coaching","summary":"Fully personalized plans with weekly check-ins for serious runners and athletes.","points":[{"text":"Custom weekly training plan"},{"text":"Form and pacing feedback"},{"text":"Strength + recovery support"},{"text":"Direct coach messaging"}],"ctatext":"Book a Call","ctalink":"page://g4xzcsot7mak6oor"},{"title":"Race Prep Program","summary":"A focused block to peak for your next 5K, 10K, half, or marathon.","points":[{"text":"Peak-phase programming"},{"text":"Race simulation workouts"},{"text":"Fueling strategy guidance"},{"text":"Taper and race-week plan"}],"ctatext":"Book a Call","ctalink":"page://g4xzcsot7mak6oor"},{"title":"Foundation Reset","summary":"Build consistency, mobility, and base fitness without burnout.","points":[{"text":"Beginner-friendly structure"},{"text":"Injury-prevention focus"},{"text":"Habit and accountability system"},{"text":"Sustainable weekly volume"}],"ctatext":"Book a Call","ctalink":"page://g4xzcsot7mak6oor"}]},"id":"pqntx62agqk0h1ye","isHidden":false,"type":"programs"}],"id":"q1xz16kzutppft76","width":"1/1"}],"id":"nhroqgrajmuhl7zm"},{"attrs":[],"columns":[{"blocks":[],"id":"c5b19bc0-7299-4775-9ba8-f688ae91bb3d","width":"1/1"}],"id":"1a7c676a-60b3-423d-bc87-aa1826e7d300"}]
+
+----
+
+Eyebrow: Coaching Programs
+
+----
+
+Heading: Training built around your goals
+
+----
+
+Description: Choose a coaching track that matches your experience, schedule, and race targets.
+
+----
+
+Programs:
+
+- 
+  title: 1:1 Performance Coaching
+  summary: >
+    Fully personalized plans with weekly
+    check-ins for serious runners and
+    athletes.
+  points:
+    - 
+      text: Custom weekly training plan
+    - 
+      text: Form and pacing feedback
+    - 
+      text: Strength + recovery support
+    - 
+      text: Direct coach messaging
+  ctatext: Book a Call
+  ctalink: page://g4xzcsot7mak6oor
+- 
+  title: Race Prep Program
+  summary: >
+    A focused block to peak for your next
+    5K, 10K, half, or marathon.
+  points:
+    - 
+      text: Peak-phase programming
+    - 
+      text: Race simulation workouts
+    - 
+      text: Fueling strategy guidance
+    - 
+      text: Taper and race-week plan
+  ctatext: Book a Call
+  ctalink: page://g4xzcsot7mak6oor
+- 
+  title: Foundation Reset
+  summary: >
+    Build consistency, mobility, and base
+    fitness without burnout.
+  points:
+    - 
+      text: Beginner-friendly structure
+    - 
+      text: Injury-prevention focus
+    - 
+      text: Habit and accountability system
+    - 
+      text: Sustainable weekly volume
+  ctatext: Book a Call
+  ctalink: page://g4xzcsot7mak6oor
+
+----
+
+Uuid: hnrhc7ij3xlmqp10
