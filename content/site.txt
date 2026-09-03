@@ -20,6 +20,9 @@ Headerlinks:
   text: Results
   link: '/#results'
 - 
+  text: Reviews
+  link: '/#reviews'
+- 
   text: FAQ
   link: '/#faq'
 

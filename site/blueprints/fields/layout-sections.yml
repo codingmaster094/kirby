@@ -12,6 +12,7 @@ fieldsets:
   - coach
   - transformations
   - method_in_action
+  - reviews
   - faq
   - cta
   - programs

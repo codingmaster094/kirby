@@ -2,10 +2,18 @@
 
 return function ($kirby, $page) {
 	$alert = null;
+	$errors = [];
+	$data = [
+		'name'    => '',
+		'email'   => '',
+		'phone'   => '',
+		'goal'    => '',
+		'message' => '',
+	];
 	$success = get('sent') === '1';
 
 	if ($kirby->request()->is('POST') === false || get('contact-form') !== '1') {
-		return compact('alert', 'success');
+		return compact('alert', 'success', 'errors', 'data');
 	}
 
 	// Honeypot
@@ -15,7 +23,7 @@ return function ($kirby, $page) {
 
 	if (csrf(get('csrf')) === false) {
 		$alert = 'Your session expired. Please try again.';
-		return compact('alert', 'success');
+		return compact('alert', 'success', 'errors', 'data');
 	}
 
 	$data = [
@@ -26,14 +34,50 @@ return function ($kirby, $page) {
 		'message' => trim((string) get('message')),
 	];
 
-	if ($data['name'] === '' || $data['email'] === '' || $data['message'] === '') {
-		$alert = 'Please fill in your name, email, and message.';
-		return compact('alert', 'success');
+	$nameLen = mb_strlen($data['name']);
+	if ($data['name'] === '') {
+		$errors['name'] = 'Please enter your name.';
+	} elseif ($nameLen < 2) {
+		$errors['name'] = 'Name must be at least 2 characters.';
+	} elseif ($nameLen > 80) {
+		$errors['name'] = 'Name must be 80 characters or fewer.';
+	} elseif (!preg_match('/^[\p{L}\p{M}\s\'\-\.]+$/u', $data['name'])) {
+		$errors['name'] = 'Name can only include letters, spaces, hyphens, and apostrophes.';
 	}
 
-	if (filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
-		$alert = 'Please enter a valid email address.';
-		return compact('alert', 'success');
+	if ($data['email'] === '') {
+		$errors['email'] = 'Please enter your email address.';
+	} elseif (filter_var($data['email'], FILTER_VALIDATE_EMAIL) === false) {
+		$errors['email'] = 'Please enter a valid email address.';
+	} elseif (mb_strlen($data['email']) > 190) {
+		$errors['email'] = 'Email must be 190 characters or fewer.';
+	}
+
+	if ($data['phone'] !== '') {
+		$digits = preg_replace('/\D+/', '', $data['phone']);
+		if (strlen((string) $digits) < 7 || strlen((string) $digits) > 15) {
+			$errors['phone'] = 'Enter a valid phone number (7–15 digits).';
+		} elseif (!preg_match('/^[+\d][\d\s().\-]{6,24}$/', $data['phone'])) {
+			$errors['phone'] = 'Phone number contains invalid characters.';
+		}
+	}
+
+	$messageLen = mb_strlen($data['message']);
+	if ($data['message'] === '') {
+		$errors['message'] = 'Please enter a short message.';
+	} elseif ($messageLen < 10) {
+		$errors['message'] = 'Message must be at least 10 characters.';
+	} elseif ($messageLen > 2000) {
+		$errors['message'] = 'Message must be 2000 characters or fewer.';
+	}
+
+	if ($data['goal'] !== '' && mb_strlen($data['goal']) > 120) {
+		$errors['goal'] = 'Please choose a valid goal.';
+	}
+
+	if ($errors !== []) {
+		$alert = 'Please fix the highlighted fields and try again.';
+		return compact('alert', 'success', 'errors', 'data');
 	}
 
 	try {
@@ -97,5 +141,5 @@ return function ($kirby, $page) {
 		$alert = 'Something went wrong. Please email us directly or try again.';
 	}
 
-	return compact('alert', 'success');
+	return compact('alert', 'success', 'errors', 'data');
 };

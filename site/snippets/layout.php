@@ -26,6 +26,8 @@ foreach ($page->$field()->toLayouts() as $layout) {
 				'page'    => $page,
 				'alert'   => $alert ?? null,
 				'success' => $success ?? null,
+				'errors'  => $errors ?? [],
+				'data'    => $data ?? [],
 			]);
 		}
 	}
