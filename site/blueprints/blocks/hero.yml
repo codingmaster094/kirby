@@ -4,6 +4,11 @@ preview: fields
 wysiwyg: true
 
 fields:
+  eyebrow:
+    label: Eyebrow
+    type: text
+    default: Running Coaching
+    help: Short label above the headline (e.g. For runners & athletes).
   heading:
     label: Heading
     type: text
@@ -12,6 +17,7 @@ fields:
     label: Description
     type: textarea
     size: medium
+    help: One short paragraph. Who you help, what you offer, and the result.
   image:
     label: Banner image
     type: files
@@ -34,7 +40,7 @@ fields:
     label: Primary button text
     type: text
     width: 1/2
-    default: Learn More
+    default: Book a Free Strategy Call
   primaryLink:
     label: Primary button link
     type: link
@@ -43,7 +49,7 @@ fields:
     label: Secondary button text
     type: text
     width: 1/2
-    default: Our Services
+    default: Explore Programs
   secondaryLink:
     label: Secondary button link
     type: link

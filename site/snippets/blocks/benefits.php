@@ -6,7 +6,7 @@ $items = $block->items()->toStructure();
 ?>
 
 <?php if ($heading !== '' || $items->isNotEmpty()): ?>
-<section class="bg-ink px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
+<section id="proof" class="bg-ink px-4 py-16 sm:px-6 sm:py-20 lg:px-10 lg:py-28">
     <div class="reveal mx-auto flex max-w-7xl flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
         <div class="max-w-xl">
             <?php if ($eyebrow !== ''): ?>
@@ -30,13 +30,13 @@ $items = $block->items()->toStructure();
 
         <?php if ($items->isNotEmpty()): ?>
             <div class="w-full max-w-2xl border-t border-white/15 pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-                <div class="grid grid-cols-3 gap-3 sm:gap-8">
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
                     <?php foreach ($items as $item): ?>
-                        <div class="min-w-0 text-center sm:text-left">
-                            <p class="text-[1.7rem] font-semibold leading-none tracking-tight text-lime sm:text-5xl md:text-6xl">
+                        <div class="min-w-0 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-5 text-center sm:border-0 sm:bg-transparent sm:p-0 sm:text-left">
+                            <p class="text-4xl font-semibold leading-none tracking-tight text-lime sm:text-5xl md:text-6xl">
                                 <?= esc((string) $item->title()->value()) ?>
                             </p>
-                            <div class="mt-2 text-[11px] leading-snug text-white sm:text-sm">
+                            <div class="stat-copy mt-3 text-sm font-semibold leading-snug text-white">
                                 <?= $item->description()->kirbytext()->value() ?>
                             </div>
                         </div>

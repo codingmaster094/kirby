@@ -24,8 +24,12 @@ fields:
         label: Title
         type: text
         required: true
+      audience:
+        label: Who it is for
+        type: text
+        placeholder: Intermediate runners targeting a PR
       summary:
-        label: Summary
+        label: Main benefit
         type: textarea
         size: small
         buttons: false

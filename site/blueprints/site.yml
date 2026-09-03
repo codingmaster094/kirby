@@ -9,6 +9,32 @@ tabs:
         label: Pages
         status: all
 
+  header:
+    label: Header
+    icon: menu
+    fields:
+      headerLinks:
+        label: Header navigation
+        type: structure
+        help: Primary nav links. Use page links or home anchors (e.g. /#why-us). Leave empty to show all listed pages.
+        fields:
+          text:
+            label: Label
+            type: text
+            required: true
+          link:
+            label: Link
+            type: link
+            required: true
+      headerCtaText:
+        label: Header CTA text
+        type: text
+        default: Book a Free Strategy Call
+      headerCtaLink:
+        label: Header CTA link
+        type: link
+        help: Defaults to the Contact page when empty.
+
   footer:
     label: Footer
     icon: menu

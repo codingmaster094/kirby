@@ -16,7 +16,7 @@ fields:
   eyebrow:
     label: Eyebrow
     type: text
-    default: MEET THE FOUNDER
+    default: Meet the Coach
 
   heading:
     label: Heading
@@ -28,6 +28,17 @@ fields:
     label: Description
     type: textarea
     buttons: false
+    help: Coaching philosophy, experience, and how athletes work with you.
+
+  highlights:
+    label: Credibility highlights
+    type: structure
+    help: Short bullets for experience, methodology, or athlete focus.
+    fields:
+      text:
+        label: Highlight
+        type: text
+        required: true
 
   certifications:
     label: Certifications
@@ -37,3 +48,14 @@ fields:
         label: Certification
         type: text
         required: true
+
+  primaryText:
+    label: Primary button text
+    type: text
+    width: 1/2
+    default: Book a Free Strategy Call
+
+  primaryLink:
+    label: Primary button link
+    type: link
+    width: 1/2

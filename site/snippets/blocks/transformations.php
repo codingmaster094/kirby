@@ -3,7 +3,7 @@
 $eyebrow = (string) $block->eyebrow()->value();
 $heading = (string) $block->heading()->value();
 $intro = (string) $block->description()->kirbytext()->value();
-$items = $block->items()->toStructure();
+$items = $block->items()->toStructure()->limit(3);
 $total = $items->count();
 $sectionId = 'transformations-' . $block->id();
 
@@ -17,7 +17,7 @@ $pad = static function (int $n): string {
 ?>
 
 <section
-    id="transformations"
+    id="results"
     class="tf-section relative overflow-x-clip bg-ink px-4 py-20 sm:px-6 lg:px-10 lg:py-28"
     data-tf-section
     data-tf-count="<?= $total ?>"
@@ -71,6 +71,11 @@ $pad = static function (int $n): string {
                 <?php foreach ($items as $index => $item): ?>
                     <?php
                     $title = (string) $item->title()->value();
+                    $athlete = trim((string) $item->athlete()->value());
+                    $goal = trim((string) $item->goal()->value());
+                    $challenge = trim((string) $item->challenge()->value());
+                    $approach = trim((string) $item->approach()->value());
+                    $result = trim((string) $item->result()->value());
                     $description = (string) $item->description()->kirbytext()->value();
                     $points = $item->points()->toStructure();
                     $image = $item->image()->toFiles()->first()
@@ -83,11 +88,12 @@ $pad = static function (int $n): string {
                     }
                     $alt = trim((string) $item->imageAlt()->value());
                     if ($alt === '') {
-                        $alt = $title !== '' ? $title . ' before and after' : 'Client transformation before and after';
+                        $alt = $title !== '' ? $title . ' athlete story' : 'Athlete coaching story';
                     }
                     $reverse = $index % 2 === 1;
                     $number = $pad($index + 1);
                     $totalLabel = $pad($total);
+                    $hasCaseStructure = $athlete !== '' || $goal !== '' || $challenge !== '' || $approach !== '' || $result !== '';
                     ?>
 
                     <article
@@ -109,8 +115,35 @@ $pad = static function (int $n): string {
                                 </h3>
                             <?php endif ?>
 
-                            <?php if ($description !== ''): ?>
+                            <?php if ($hasCaseStructure): ?>
+                                <dl class="mt-6 space-y-4">
+                                    <?php
+                                    $rows = [
+                                        'Athlete' => $athlete,
+                                        'Goal' => $goal,
+                                        'Challenge' => $challenge,
+                                        'Approach' => $approach,
+                                        'Result' => $result,
+                                    ];
+                                    ?>
+                                    <?php foreach ($rows as $label => $value): ?>
+                                        <?php if ($value === '') {
+                                            continue;
+                                        } ?>
+                                        <div>
+                                            <dt class="text-[11px] font-bold uppercase tracking-[0.18em] text-lime"><?= esc($label) ?></dt>
+                                            <dd class="mt-1 text-sm leading-6 text-white/90 sm:text-base"><?= esc($value) ?></dd>
+                                        </div>
+                                    <?php endforeach ?>
+                                </dl>
+                            <?php elseif ($description !== ''): ?>
                                 <div class="mt-4 max-w-xl text-base leading-7 text-soft">
+                                    <?= $description ?>
+                                </div>
+                            <?php endif ?>
+
+                            <?php if ($hasCaseStructure && $description !== ''): ?>
+                                <div class="mt-5 max-w-xl text-sm leading-7 text-soft">
                                     <?= $description ?>
                                 </div>
                             <?php endif ?>
@@ -142,7 +175,7 @@ $pad = static function (int $n): string {
                         <div class="<?= $reverse ? 'order-1 lg:order-1' : 'order-2 lg:order-2' ?>">
                             <div class="tf-media relative overflow-hidden rounded-[1.75rem] bg-panel ring-1 ring-white/10">
                                 <span class="tf-badge absolute left-4 top-4 z-10 inline-flex rounded-full bg-ink/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-lime backdrop-blur sm:left-5 sm:top-5 sm:text-xs">
-                                    Before / After
+                                    Case Study
                                 </span>
 
                                 <?php if ($image): ?>
@@ -154,16 +187,10 @@ $pad = static function (int $n): string {
                                             loading="lazy"
                                             decoding="async"
                                         >
-                                        <span class="pointer-events-none absolute bottom-3 left-3 rounded-full bg-black/55 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur">
-                                            Before
-                                        </span>
-                                        <span class="pointer-events-none absolute bottom-3 right-3 rounded-full bg-lime px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-ink">
-                                            After
-                                        </span>
                                     </div>
                                 <?php else: ?>
                                     <div class="grid aspect-[3/2] place-items-center px-6 text-center text-sm text-soft">
-                                        Upload one combined before &amp; after image
+                                        Upload a case study image
                                     </div>
                                 <?php endif ?>
                             </div>
@@ -243,8 +270,7 @@ $pad = static function (int $n): string {
 
                 var offset = (rect.top + rect.height * 0.5 - viewportMid) / window.innerHeight;
                 var shift = Math.max(-18, Math.min(18, offset * -28));
-                var scale = 1.04;
-                img.style.transform = 'translate3d(0, ' + shift.toFixed(2) + 'px, 0) scale(' + scale + ')';
+                img.style.transform = 'translate3d(0, ' + shift.toFixed(2) + 'px, 0) scale(1.04)';
             });
         };
 

@@ -200,6 +200,17 @@
         const sidebar = document.getElementById('mobile-sidebar');
         const overlay = document.getElementById('sidebar-overlay');
 
+        const closeMenu = function () {
+            if (!sidebar || !overlay || !openBtn) {
+                return;
+            }
+            sidebar.classList.add('translate-x-full');
+            overlay.classList.add('hidden');
+            sidebar.setAttribute('aria-hidden', 'true');
+            openBtn.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('overflow-hidden');
+        };
+
         if (openBtn && closeBtn && sidebar && overlay) {
             const open = function () {
                 sidebar.classList.remove('translate-x-full');
@@ -209,40 +220,50 @@
                 document.body.classList.add('overflow-hidden');
             };
 
-            const close = function () {
-                sidebar.classList.add('translate-x-full');
-                overlay.classList.add('hidden');
-                sidebar.setAttribute('aria-hidden', 'true');
-                openBtn.setAttribute('aria-expanded', 'false');
-                document.body.classList.remove('overflow-hidden');
-            };
-
             openBtn.addEventListener('click', open);
-            closeBtn.addEventListener('click', close);
-            overlay.addEventListener('click', close);
+            closeBtn.addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
 
             document.addEventListener('keydown', function (event) {
                 if (event.key === 'Escape') {
-                    close();
+                    closeMenu();
                 }
             });
         }
 
-        document.querySelectorAll('[data-scroll], a[href^="#"]').forEach(function (anchor) {
+        document.querySelectorAll('[data-scroll], a[href*="#"]').forEach(function (anchor) {
             anchor.addEventListener('click', function (event) {
-                const targetId = anchor.getAttribute('href');
-
-                if (!targetId || targetId === '#' || !targetId.startsWith('#')) {
+                const href = anchor.getAttribute('href');
+                if (!href || href === '#') {
                     return;
                 }
 
-                const target = document.querySelector(targetId);
+                var hash = '';
+                if (href.startsWith('#')) {
+                    hash = href;
+                } else {
+                    try {
+                        var parsed = new URL(href, window.location.href);
+                        if (parsed.pathname.replace(/\/$/, '') !== window.location.pathname.replace(/\/$/, '')) {
+                            return;
+                        }
+                        hash = parsed.hash;
+                    } catch (e) {
+                        return;
+                    }
+                }
 
+                if (!hash || hash === '#') {
+                    return;
+                }
+
+                const target = document.querySelector(hash);
                 if (!target) {
                     return;
                 }
 
                 event.preventDefault();
+                closeMenu();
                 const header = document.querySelector('header');
                 const offset = header ? header.offsetHeight + 12 : 0;
                 const top = target.getBoundingClientRect().top + window.scrollY - offset;

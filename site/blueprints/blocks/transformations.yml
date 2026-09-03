@@ -7,25 +7,26 @@ fields:
   eyebrow:
     label: Eyebrow
     type: text
-    default: Client Transformations
+    default: Athlete Results
 
   heading:
     label: Heading
     type: text
-    default: Real Bodies. Real Results.
+    default: Athlete Case Studies
 
   description:
     label: Intro
     type: textarea
     size: small
     buttons: false
-    help: Optional short intro above the transformation stories.
+    help: Optional short intro above the case studies.
 
   items:
-    label: Transformations
+    label: Case studies
     type: structure
     min: 1
-    help: Add stories here. Layout alternates automatically (content/image).
+    max: 3
+    help: Feature up to 3 strong stories. Layout alternates automatically.
     columns:
       title:
         width: 2/3
@@ -33,23 +34,50 @@ fields:
         width: 1/3
     fields:
       title:
-        label: Title
+        label: Card title
         type: text
         required: true
-        placeholder: From Burnout to Breakthrough
+        placeholder: From inconsistent training to race-ready
 
-      description:
-        label: Description
+      athlete:
+        label: Athlete
+        type: text
+        placeholder: Recreational half-marathoner
+
+      goal:
+        label: Goal
+        type: text
+        placeholder: Finish stronger and stay injury-resilient
+
+      challenge:
+        label: Challenge
         type: textarea
         size: small
         buttons: false
-        required: true
-        help: Short story of how IronPace Gym helped.
+
+      approach:
+        label: Coaching approach
+        type: textarea
+        size: small
+        buttons: false
+
+      result:
+        label: Result
+        type: textarea
+        size: small
+        buttons: false
+        help: Only state outcomes you can stand behind. Do not invent race times or PRs.
+
+      description:
+        label: Extra story (optional)
+        type: textarea
+        size: small
+        buttons: false
+        help: Optional supporting copy below the case-study structure.
 
       points:
-        label: Key Points
+        label: Focus areas
         type: structure
-        min: 3
         max: 5
         fields:
           text:
@@ -58,26 +86,23 @@ fields:
             required: true
 
       image:
-        label: Before & After Image
+        label: Story image
         type: files
         max: 1
         layout: cards
         query: page.files.filterBy("type", "image")
         uploads:
           template: image
-        help: Upload one combined before/after image (side-by-side), like the transformation screenshot.
 
       imageAlt:
         label: Image Alt Text
         type: text
-        help: Accessible description for the transformation image.
 
       ctaText:
         label: CTA Text
         type: text
         width: 1/2
-        default: Start Your Journey
-        help: Leave empty to hide the button.
+        default: Book a Free Strategy Call
 
       ctaLink:
         label: CTA Link

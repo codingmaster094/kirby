@@ -15,13 +15,25 @@ $slideCount = $slides->count();
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <?php endif ?>
 
-    <section id="method-in-action" class="overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
+    <section id="how-it-works" class="overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
         <div class="mx-auto max-w-[1400px] px-4 sm:px-6">
-            <?php if ($heading !== ''): ?>
-                <h2 class="reveal text-center text-3xl font-extrabold uppercase tracking-tight text-ink sm:text-5xl lg:text-[3.25rem]">
-                    <?= esc($heading) ?>
-                </h2>
-            <?php endif ?>
+            <?php
+            $eyebrow = (string) $block->eyebrow()->value();
+            $description = (string) $block->description()->kirbytext()->value();
+            ?>
+            <div class="mx-auto max-w-3xl text-center">
+                <?php if ($eyebrow !== ''): ?>
+                    <p class="reveal text-xs font-bold uppercase tracking-[0.22em] text-slate-500"><?= esc($eyebrow) ?></p>
+                <?php endif ?>
+                <?php if ($heading !== ''): ?>
+                    <h2 class="reveal mt-3 text-3xl font-extrabold uppercase tracking-tight text-ink sm:text-5xl lg:text-[3.25rem]">
+                        <?= esc($heading) ?>
+                    </h2>
+                <?php endif ?>
+                <?php if ($description !== ''): ?>
+                    <div class="reveal mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600"><?= $description ?></div>
+                <?php endif ?>
+            </div>
 
             <div class="reveal method-carousel relative mx-auto mt-12 sm:mt-16">
                 <div class="method-carousel-viewport overflow-hidden">
@@ -61,7 +73,7 @@ $slideCount = $slides->count();
                                                 loop
                                                 playsinline
                                                 webkit-playsinline
-                                                preload="auto"
+                                                preload="metadata"
                                             ></video>
                                         <?php elseif ($image): ?>
                                             <img
